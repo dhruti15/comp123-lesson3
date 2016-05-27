@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace comp123_lesson3
 {
-  public class Program
+
+    /**
+     * This class is the driver class for our program 
+     * 
+     * @class Program
+     */
+    public class Program
     {
         /**
         *the main method for our driver class program
@@ -17,17 +23,39 @@ namespace comp123_lesson3
        public static void Main(string[] args)
         {
             // create a new instance of the person class
-            person person = new person("DHRUTI");
-            Console.WriteLine(person.Name);
+            Person person = new Person("DHRUTI");
+            person.Age = 18;
+            person._SaysHello();
+            person.ShowAge();
 
-            //set a value in the name property of the person class
-            person.Name = "Dhruti";
+            Console.WriteLine();
 
-            //get the name value and print the result to console
-            Console.WriteLine(person.Name);
-            
+
+            Person Jenny = new Person(18);
+            Jenny.Name = "Jenny";
+            Jenny._SaysHello();
+            Jenny.ShowAge();
+
+            Console.WriteLine();
+
+            Person Thomas = new Person("Thomas", 30);
+            Thomas._SaysHello();
+           Thomas.ShowAge();
+
+            Console.WriteLine();
+
+            Person Aksar = new Person();
+            Aksar.Name = "Aksar";
+            Aksar.Age = 19;
+           Aksar._SaysHello();
+            Aksar.ShowAge();
+
+            Console.ReadLine();
+
+          
+
 
         }
-        
+
     }
 }
